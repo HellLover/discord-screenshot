@@ -1,5 +1,9 @@
+# What is this?
+
 👋 Hey there! `discord-screenshot` is a simple package to screenshot websites!
-Usage:
+
+# Usage:
+
 ```javascript
 
    const { DiscordScreenshoter } = require("discord-screenshot");
