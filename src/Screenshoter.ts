@@ -1,7 +1,5 @@
-// This is my first TypeScript project, so... yes
-
-import fetch from "node-fetch";
-import chalk from "chalk";
+import chalk from "chalk"
+import fetch from "node-fetch"
 
 const BASE_URL: string = "https://image.thum.io/get/width/1920/crop/675/noanimate/";
 
