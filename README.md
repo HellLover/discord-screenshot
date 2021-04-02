@@ -20,5 +20,6 @@
 
    client.login("bot token");
 ```
+# Discord 
 
-My Discord: HellLover#9626
+You can find me on Discord with tag: HellLover#9626
