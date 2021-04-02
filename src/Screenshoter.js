@@ -1,7 +1,7 @@
-import chalk from "chalk"
-import fetch from "node-fetch"
+const chalk = require("chalk");
+const fetch = require("node-fetch")
 
-const BASE_URL: string = "https://image.thum.io/get/width/1920/crop/675/noanimate/";
+const BASE_URL = "https://image.thum.io/get/width/1920/crop/675/noanimate/";
 
 class DiscordScreenshoter {
 
@@ -15,11 +15,11 @@ class DiscordScreenshoter {
      * @param log Console log or not
 	*/
 
-    static async screenshot(site: string, log: boolean = true) {
+    async screenshot(site, log = true) {
         
         if(!site) throw new Error(chalk.red("[ERROR: SCREENSHOTER] No site URL provided!"))
 
-        const url: string = /^(https?:\/\/)/i.test(site) ? site : `http://${site}`
+        const url = /^(https?:\/\/)/i.test(site) ? site : `http://${site}`
         const { body } = await fetch(`${BASE_URL}${url}`);
 
         if(log === true) {
@@ -29,4 +29,4 @@ class DiscordScreenshoter {
     }
 }
 
-export { DiscordScreenshoter };
+module.exports = { DiscordScreenshoter }

@@ -2,9 +2,9 @@
   "name": "discord-screenshot",
   "version": "1.1.0",
   "description": "A simple module to screenshot websites with your Discord bot",
-  "main": "./src/Screenshoter.ts",
+  "main": "./src/Screenshoter.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/Screenshoter.js"
   },
   "keywords": [
     "screenshoter",
@@ -19,13 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HellLover/hell-screenshoter.git"
+    "url": "git+https://github.com/HellLover/discord-screenshot.git"
   },
   "bugs": {
-    "url": "https://github.com/HellLover/hell-screenshoter/issues"
+    "url": "https://github.com/HellLover/discord-screenshot/issues"
   },
-  "homepage": "https://github.com/HellLover/hell-screenshoter#readme",
-  "devDependencies": {
-    "typescript": "^4.2.3"
-  }
+  "homepage": "https://github.com/HellLover/discord-screenshot#readme"
 }
