@@ -5,7 +5,11 @@ import chalk from "chalk";
 
 const BASE_URL: string = "https://image.thum.io/get/width/1920/crop/675/noanimate/";
 
-class HellScreenshoter {
+class DiscordScreenshoter {
+
+    constructor() {
+        throw new Error(`The ${this.constructor.name} class may not be instantiated!`);
+    }
 
     /**
 	 * Screenshoting the site
@@ -13,7 +17,7 @@ class HellScreenshoter {
      * @param log Console log or not
 	*/
 
-    static async screenshot(site: string, log: boolean = true): Promise<void> {
+    static async screenshot(site: string, log: boolean = true) {
         
         if(!site) throw new Error(chalk.red("[ERROR: SCREENSHOTER] No site URL provided!"))
 
@@ -27,4 +31,4 @@ class HellScreenshoter {
     }
 }
 
-export { HellScreenshoter };
+export { DiscordScreenshoter };
