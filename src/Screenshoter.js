@@ -1,6 +1,5 @@
 const chalk = require("chalk");
 const fetch = require("node-fetch");
-const Discord = require("discord.js")
 
 const BASE_URL = "https://image.thum.io/get/width/1920/crop/675/noanimate/";
 
@@ -18,7 +17,7 @@ module.exports = {
         const url = /^(https?:\/\/)/i.test(site) ? site : `http://${site}`
         const { body } = await fetch(`${BASE_URL}${url}`);
 
-        const attachment = new Discord.MessageAttachment(body, "Screenshot.png")
+        const attachment = { files: [{ attachment: body, name: "Screenshot.png" }] }
         return attachment;
     },
     

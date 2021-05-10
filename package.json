@@ -14,7 +14,7 @@
   "author": "HellLover",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.1",
     "node-fetch": "^2.6.1"
   },
   "repository": {
