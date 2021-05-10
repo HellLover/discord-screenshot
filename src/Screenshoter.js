@@ -1,32 +1,28 @@
 const chalk = require("chalk");
-const fetch = require("node-fetch")
+const fetch = require("node-fetch");
+const Discord = require("discord.js")
 
 const BASE_URL = "https://image.thum.io/get/width/1920/crop/675/noanimate/";
 
-class DiscordScreenshoter {
-
-    constructor() {
-        throw new Error(`The ${this.constructor.name} class may not be instantiated!`);
-    }
+module.exports = {
 
     /**
 	 * Screenshoting the site
 	 * @param site The specified site to screenshot
-     * @param log Console log or not
 	*/
 
-    async screenshot(site, log = true) {
+    async screenshot(site) {
         
-        if(!site) throw new Error(chalk.red("[ERROR: SCREENSHOTER] No site URL provided!"))
+        if(!site) throw new TypeError(chalk.red("[ERROR: SCREENSHOTER] (Missing the first parameter) No site URL provided!"))
 
         const url = /^(https?:\/\/)/i.test(site) ? site : `http://${site}`
         const { body } = await fetch(`${BASE_URL}${url}`);
 
-        if(log === true) {
-            console.log("Screenshot is ready");
-        }
-        return body;
+        const attachment = new Discord.MessageAttachment(body, "Screenshot.png")
+        return attachment;
+    },
+    
+    get version() {
+        return "1.0.0"
     }
 }
-
-module.exports = { DiscordScreenshoter }

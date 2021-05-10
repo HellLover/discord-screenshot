@@ -1,6 +1,6 @@
 {
   "name": "discord-screenshot",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "A simple module to screenshot websites with your Discord bot",
   "main": "./src/Screenshoter.js",
   "scripts": {
